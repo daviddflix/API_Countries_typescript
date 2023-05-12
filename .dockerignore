@@ -1,0 +1,28 @@
+# Files and directories to ignore when building the Docker image
+
+# Node.js modules
+node_modules/
+
+# TypeScript build artifacts
+dist/
+*.tsbuildinfo
+
+# Development and testing files
+test/
+*.spec.ts
+*.test.ts
+*.test.js
+*.test-d.ts
+*.mock.ts
+
+# Miscellaneous files and directories
+.git/
+.vscode/
+.env
+.env.local
+.env.*.local
+.DS_Store
+
+# Package manager lock files
+yarn.lock
+package-lock.json
