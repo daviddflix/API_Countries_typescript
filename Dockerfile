@@ -13,11 +13,17 @@ RUN npm install
 # Copy the rest of the application code to /app
 COPY . .
 
-# Set environment variables
-ENV NODE_ENV=production
+# Copy the environment variables file to /app
+COPY .env .
 
-# Expose port 3001 for the application to listen on
-EXPOSE 3001
+# Set environment variables
+ENV $(cat .env | xargs)
+
+# Copy the public folder to the dist directory
+COPY public dist/public
+
+# Build the application
+RUN npm run build
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["npm", "run", "start"]

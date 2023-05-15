@@ -8,8 +8,11 @@ import dataInfo from "./libs/restCountries";
 import { AwsEc2Database } from "./src/database";
 import { modelCountry } from "./src/models/country";
 
+
 const app: Application = express();
 const port: number = 3001;
+
+
 
 //MIDDLEWARES
 app.use(express.static("public"));

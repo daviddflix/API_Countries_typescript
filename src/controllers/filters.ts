@@ -22,7 +22,7 @@ const orderFilter = async (req: Request, res: Response) => {
     });
 
   } else {
-    res.send("accepted values ASC or DESC not provided");
+    res.send("Accepted values are ASC or DESC");
   }
 };
 
